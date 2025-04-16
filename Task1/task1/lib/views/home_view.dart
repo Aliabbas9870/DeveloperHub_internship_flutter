@@ -16,7 +16,13 @@ class HomeView extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(email),
+        backgroundColor: Colors.deepPurple,
+        title: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: ListTile(
+            leading: CircleAvatar(), title: Text(name,style: TextStyle(color: Colors.white),),
+            subtitle: Text(email,style: TextStyle(color: Colors.white),)),
+        ),
       ),
       body: Column(
         children: [

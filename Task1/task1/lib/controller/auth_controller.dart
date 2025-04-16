@@ -10,21 +10,36 @@ class AuthController extends GetxController {
   void loginUser() {
     final email = emailController.text.trim();
     final password = passwordController.text.trim();
-    final name = passwordController.text.trim();
+    final name = nameController.text.trim();
 
-    if (email.isEmpty || password.isEmpty || name.isEmpty) {
-      Get.snackbar("Error", "Please fill all fields",
-          colorText: Colors.white,
-          icon: Icon(Icons.error),
-          snackPosition: SnackPosition.TOP,
-          backgroundColor: Colors.red);
-    } else {
+   if (email.isEmpty || password.isEmpty || name.isEmpty) {
+  Get.snackbar("Error", "Please fill all fields",
+      colorText: Colors.white,
+      icon: Icon(Icons.error),
+      snackPosition: SnackPosition.TOP,
+      backgroundColor: Colors.red);
+} else if (!GetUtils.isEmail(email)) {
+  Get.snackbar("Error", "Please enter a valid email",
+      colorText: Colors.white,
+      icon: Icon(Icons.error),
+      snackPosition: SnackPosition.TOP,
+      backgroundColor: Colors.red);
+} else if (password.length < 6) {
+  Get.snackbar("Error", "Password must be at least 6 characters",
+      colorText: Colors.white,
+      icon: Icon(Icons.error),
+      snackPosition: SnackPosition.TOP,
+      backgroundColor: Colors.red);
+}
+
+   
+    else {
       Get.snackbar("Login", "Logged in as $email",
-      icon: Icon(Icons.done_outline_outlined),
+          icon: Icon(Icons.done_outline_outlined),
           snackPosition: SnackPosition.TOP,
           colorText: Colors.white,
           backgroundColor: Colors.greenAccent);
-          
+
       Get.off(HomeView(),
           duration: Duration(seconds: 2),
           transition: Transition.circularReveal,
