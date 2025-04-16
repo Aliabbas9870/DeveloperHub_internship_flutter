@@ -4,11 +4,9 @@ import 'package:task1/controller/auth_controller.dart';
 
 class LoginAuth extends StatelessWidget {
   const LoginAuth({super.key});
-
   @override
   Widget build(BuildContext context) {
     final loginController = Get.put(AuthController());
-
     return Scaffold(
       appBar: AppBar(title: const Text("Login")),
       body: Padding(

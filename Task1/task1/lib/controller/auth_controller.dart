@@ -41,8 +41,9 @@ class AuthController extends GetxController {
           backgroundColor: Colors.greenAccent);
 
       Get.off(HomeView(),
-          duration: Duration(seconds: 2),
-          transition: Transition.circularReveal,
+          
+         
+            transition: Transition.leftToRight, duration: Duration(seconds: 4),
           arguments: [name.toString(), email.toString()]);
     }
   }
