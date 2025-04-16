@@ -25,6 +25,8 @@ class HomeView extends StatelessWidget {
         ),
       ),
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.center, 
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           ListTile(
             leading: Text(email),

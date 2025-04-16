@@ -14,15 +14,18 @@ class SplashView extends StatelessWidget {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const Icon(Icons.flutter_dash, size: 100, color: Colors.white),
             const SizedBox(height: 20),
-            const Text(
-              'Welcome to DeveloperHub Task1',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 26,
-                fontWeight: FontWeight.bold,
+            Center(
+              child: const Text(
+                'Welcome to DeveloperHub Task1',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 26,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
             const SizedBox(height: 10),
