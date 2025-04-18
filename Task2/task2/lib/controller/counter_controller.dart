@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class CounterController extends GetxController {
@@ -8,10 +9,21 @@ class CounterController extends GetxController {
   }
 
   void dec() {
-    if (_counter> 0) {
+    if (_counter > 0) {
       _counter--;
-    
+ 
       return;
+      
     }
+        else  {
+   
+      Get.snackbar("End", "You don't dcrease the number!",
+      backgroundColor: Colors.amberAccent,
+          icon: Icon(Icons.info));
+      return;
+      
+    }
+
+
   }
 }
