@@ -80,7 +80,7 @@ class TodoView extends StatelessWidget {
         child: Text(td.tasks[index].tasknumber),
       ),
       trailing: AnimatedSwitcher(
-        duration: Duration(seconds: 3),
+        duration: Duration(seconds: 5),
         transitionBuilder: (child, animation) {
           return ScaleTransition(scale: animation, child: child);
         },
