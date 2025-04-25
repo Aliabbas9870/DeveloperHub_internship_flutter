@@ -48,12 +48,4 @@ This repository contains the final and working versions of all assigned tasks. I
 - GetX
 - Shared Preferences
 
----
-
-## 📸 Screenshots (optional)
-
-*You can add screenshots here by uploading images and using this format:*
-
-```markdown
-![tasks](https://github.com/user-attachments/assets/a9474eb6-d283-43d7-b7c5-d24bf4a06075)
 
